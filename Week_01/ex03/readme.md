@@ -7,3 +7,5 @@
 5. -XX:MetaspaceSize 元空间大小，元空间并不存放在VM中，而是使用本机内存，所以这块区域的大小受本地内存限制。这个参数的意义在于首次使用不够时而触发FGC的阈值，不设置的话，默认为20M左右
 6. -XX:MaxMetaspaceSize 元空间最大内存
 7. -XX:MaxDirectMemorySize 堆外内存，默认64M，设置了-Xmx时，堆外内存的值和堆内存的值一样，堆外内存到达最大值时，也会触发FGC
+
+![](./resource/images/2021-01-15-10-15-46.png)
