@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 public class HttpServer8803 {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8803);
-        ExecutorService executorService = Executors.newFixedThreadPool(40);
+        ExecutorService executorService = Executors.newFixedThreadPool(1024);
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
