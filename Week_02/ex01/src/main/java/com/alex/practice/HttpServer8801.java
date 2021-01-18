@@ -4,21 +4,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 /**
  * @author alex
  */
-public class HttpServer8803 {
+public class HttpServer8801 {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8803);
-        ExecutorService executorService = Executors.newFixedThreadPool(40);
+        ServerSocket serverSocket = new ServerSocket(8801);
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
-                executorService.execute( () -> service(socket));
+                service(socket);
             } catch (IOException e) {
                 e.printStackTrace();
             }
