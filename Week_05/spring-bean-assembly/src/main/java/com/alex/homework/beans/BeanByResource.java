@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.io.Serializable;
-
 /**
  * @author Alex Shen
  */
@@ -14,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class BeanByXml implements Serializable {
+public class BeanByResource {
     private String name;
     private int id;
 }

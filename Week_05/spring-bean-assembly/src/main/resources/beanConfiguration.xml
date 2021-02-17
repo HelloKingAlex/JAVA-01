@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <bean id="beanByXml"
+          class="com.alex.homework.beans.BeanByXml">
+        <property name="id" value="9527" />
+        <property name="name" value="this is beanByXml" />
+    </bean>
+
+    <context:component-scan base-package="com.alex.homework.beans" />
+    <bean id="beanByAutoWare"
+          class="com.alex.homework.beans.BeanByAutoWired">
+        <property name="id" value="8527" />
+        <property name="name" value="this is beanByAutoWare" />
+    </bean>
+
+    <bean id="beanByResource"
+          class="com.alex.homework.beans.BeanByResource">
+        <property name="id" value="8526" />
+        <property name="name" value="this is beanByResource" />
+    </bean>
+
+    <bean id="beanByResource2"
+          class="com.alex.homework.beans.BeanByResource">
+        <property name="id" value="8525" />
+        <property name="name" value="this is beanByResource" />
+    </bean>
+    <bean id="beanDemo" class="com.alex.homework.beans.BeanDemo"></bean>
+</beans>
