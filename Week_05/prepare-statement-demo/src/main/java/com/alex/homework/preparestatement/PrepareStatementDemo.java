@@ -53,8 +53,43 @@ public class PrepareStatementDemo {
         System.out.println("===conn1 commit===");
         conn1.commit();
         showData(conn1);
+
+
+        // prepared statement
+        System.out.println("=========================");
+        System.out.println("===演示PreparedStatement ===");
         // 还原自动提交设置
-        // conn1.setAutoCommit(true);
+        conn1.setAutoCommit(true);
+        try (PreparedStatement preparedStatement = conn1.prepareStatement("insert into person values(?,?)") ) {
+            preparedStatement.setInt(1,100);
+            preparedStatement.setString(2,"prepared");
+            preparedStatement.execute();
+            System.out.println("===after insert===");
+            showData(conn1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("===演示PreparedStatement 防注入===");
+        try (PreparedStatement preparedStatement = conn1.prepareStatement("update person set name=? where name=?") ) {
+            preparedStatement.setString(1,"attack");
+            preparedStatement.setString(2,"prepared' or 1=1");
+            preparedStatement.execute();
+            System.out.println("===after attack===");
+            showData(conn1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("===演示Statement 被攻击===");
+        try (Statement attack = conn1.createStatement()) {
+            String words = "prepared' or '1'='1";
+            String attackWording = "update person set name='attack' where name='" + words +"'";
+            attack.execute(attackWording);
+            System.out.println("===after attack===");
+            showData(conn1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         conn1.close();
         conn2.close();
     }
