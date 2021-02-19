@@ -21,3 +21,5 @@
 [ex.6.1-jdbc demo](./jdbc-demo)
 
 [ex.6.2-prepare-statement-demo](./prepare-statement-demo)
+
+[ex.6.3-hikari-demo](./hikari-demo)
