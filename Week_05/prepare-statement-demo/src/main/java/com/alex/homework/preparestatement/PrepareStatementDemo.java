@@ -71,9 +71,10 @@ public class PrepareStatementDemo {
         }
 
         System.out.println("===演示PreparedStatement 防注入===");
+        String attackWords = "prepared' or '1'='1";
         try (PreparedStatement preparedStatement = conn1.prepareStatement("update person set name=? where name=?") ) {
             preparedStatement.setString(1,"attack");
-            preparedStatement.setString(2,"prepared' or 1=1");
+            preparedStatement.setString(2,attackWords);
             preparedStatement.execute();
             System.out.println("===after attack===");
             showData(conn1);
@@ -82,8 +83,7 @@ public class PrepareStatementDemo {
         }
         System.out.println("===演示Statement 被攻击===");
         try (Statement attack = conn1.createStatement()) {
-            String words = "prepared' or '1'='1";
-            String attackWording = "update person set name='attack' where name='" + words +"'";
+            String attackWording = "update person set name='attack' where name='" + attackWords +"'";
             attack.execute(attackWording);
             System.out.println("===after attack===");
             showData(conn1);
@@ -135,7 +135,7 @@ public class PrepareStatementDemo {
     public static void initEmbedDB(Connection conn) throws SQLException {
         Statement statement = conn.createStatement();
         System.out.println("===create table person");
-        statement.execute("drop table person");
+        statement.execute("drop table if exists person");
         statement.execute("create table person(id integer primary key,name varchar(20))");
     }
 }

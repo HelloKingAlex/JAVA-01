@@ -32,7 +32,7 @@ public class HikariConnectionPoolDemo {
         HikariDataSource ds = new HikariDataSource(config);
         ds.getConnection()
                 .createStatement()
-                .execute("drop table person");
+                .execute("drop table if exists person");
         ds.getConnection()
                 .createStatement()
                 .execute("create table person(id integer primary key,name varchar(20))");
@@ -50,7 +50,7 @@ public class HikariConnectionPoolDemo {
         ds = new HikariDataSource(config);
         ds.getConnection()
                 .createStatement()
-                .execute("drop table person");
+                .execute("drop table if exists person");
         ds.getConnection()
                 .createStatement()
                 .execute("create table person(id integer primary key,name varchar(20))");
