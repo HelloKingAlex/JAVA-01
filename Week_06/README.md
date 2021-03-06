@@ -9,7 +9,7 @@
 * 建库及指定字符集和排序规则
 
 ```sql
-create database geektime_e_shop default character set utfbmb4 collate utf8mb4_unicode_ci
+create database geektime_e_shop default character set utf8mb4 collate utf8mb4_unicode_ci;
 ```
 
 * 用户表 (user)
@@ -61,13 +61,14 @@ CREATE TABLE `geektime_e_shop`.`vendor` (
 * 订单(order)
 
 ```sql
-CREATE TABLE `geektime_e_shop`.`order` (
-  `id` INT NOT NULL, --订单id
-  `user_id` INT NULL, --用户id
-  `total_price` DECIMAL(18,2) NULL, --总价
-  `total_discount` DECIMAL(18,2) NULL, --总折扣
-  `status` VARCHAR(1) NULL, --订单状态(未支付，付款中，已成交，作废中，已作废)
-  PRIMARY KEY (`id`));
+CREATE TABLE `order` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
 ```
 
 * 订单详情(order_detail)
