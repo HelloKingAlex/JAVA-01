@@ -2,6 +2,26 @@
 
 ## 作业
 
+### 周三
+
+#### ex02 设计对前面的订单表数据进行水平分库分表，拆分 2 个库，每个库 16 张表。。。
+
+[配置](week08-wed-02/src/main/java/com/alex/homework/week08wed02/config/DataSourceConfiguration.java)
+
+[实现](week08-wed-02/src/main/java/com/alex/homework/week08wed02/Week08Wed02Application.java)
+
+![截图1](2021-03-13-23-03-51.png)
+
+![截图2](2021-03-13-23-06-05.png)
+
+---
+
+### 周日
+
+#### ex02 基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布式事务应用 demo
+
+
+
 ## 笔记
 
 ### 数据库拆分
