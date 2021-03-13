@@ -61,7 +61,7 @@ CREATE TABLE `geektime_e_shop`.`vendor` (
 * 订单(order)
 
 ```sql
-CREATE TABLE `order` (
+CREATE TABLE `orders0` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
   `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
   `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
@@ -69,12 +69,134 @@ CREATE TABLE `order` (
   `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
   PRIMARY KEY (`id`))
   ENGINE=InnoDB;
+CREATE TABLE `orders1` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders2` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders3` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+
+CREATE TABLE `orders4` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders5` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders6` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders7` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders8` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders9` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders10` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders11` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders12` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders13` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders14` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+CREATE TABLE `orders15` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `user_id` INT NOT NULL DEFAULT -1 COMMENT '用户id',
+  `total_price` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总价',
+  `total_discount` DECIMAL(18,2) NOT NULL DEFAULT 0.00 COMMENT '总折扣',
+  `status` CHAR(1) NOT NULL DEFAULT 'I' COMMENT '订单状态(未支付，付款中，已成交，作废中，已作废)',
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB;
+
 ```
 
 * 订单详情(order_detail)
 
 ```sql
-CREATE TABLE `geektime_e_shop`.`order_detail` (
+CREATE TABLE `geektime_e_shop`.`orders_detail` (
   `id` INT NOT NULL AUTO_INCREMENT, --订单详情id
   `goods_id` INT NULL, --商品id
   `quantity` INT NULL, --购买数量
@@ -87,7 +209,7 @@ CREATE TABLE `geektime_e_shop`.`order_detail` (
 * 订单状态(order_status_dic)
 
 ```sql
-CREATE TABLE `geektime_e_shop`.`order_status_dic` (
+CREATE TABLE `geektime_e_shop`.`orders_status_dic` (
   `status` VARCHAR(1) NOT NULL, --状态号
   `description` VARCHAR(10) NULL, --描述
   PRIMARY KEY (`status`));
