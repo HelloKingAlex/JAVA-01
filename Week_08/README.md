@@ -20,7 +20,7 @@
 
 #### ex02 基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布式事务应用 demo
 
-
+[Atomikos](week08-sun-02/src/main/java/com/alex/homework/week08sun02/Week08Sun02Application.java) 
 
 ## 笔记
 
