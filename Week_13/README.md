@@ -9,6 +9,12 @@
 + [集群环境搭建](kafka.md)
 + [spring kafka 操作 kafka集群](kafka-clusters-demo/src/main/java/com/alex/homework/demo/KafkaClusterDemoApplication.java)
 
+### Sun
+
+#### ex02 思考和设计自定义 MQ 第二个版本或第三个版本，写代码实现其中至少一个功能点
+
++ [多消费者同topic 消费 && offset 消息偏移](simple-mq/simple-mq-core/src/main/java/com/alex/homework/simple/mq/SimpleMessageQueueDemo.java)
+
 ## 笔记
 
 ### 分布式消息-Kafka 消息中间件
