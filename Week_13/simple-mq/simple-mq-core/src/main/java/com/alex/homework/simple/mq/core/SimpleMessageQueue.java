@@ -47,6 +47,7 @@ public class SimpleMessageQueue {
             } else {
                 return message;
             }
+            current = System.currentTimeMillis();
         }
         return null;
     }
